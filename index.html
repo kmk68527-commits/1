@@ -2,34 +2,39 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#171717">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#171512">
 <title>권미경 전시장</title>
 <style>
-  :root { color-scheme: dark; }
   * { box-sizing: border-box; }
+  html { background: #11100e; }
   body {
-    margin: 0; background: #111; color: #f5f1e9;
+    margin: 0; background: #11100e; color: #f5f0e7;
     font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   }
   header {
-    min-height: 250px; padding: 58px 20px 42px; text-align: center;
-    display: grid; place-content: center;
-    background: radial-gradient(ellipse at 50% 0%, #5b4935 0%, #28221c 38%, #111 78%);
-    border-bottom: 1px solid #5b4c3b;
+    padding: 56px 18px 42px; text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, #655039 0%, #30271d 42%, #11100e 82%);
+    border-bottom: 1px solid #5a4935;
   }
-  .eyebrow { letter-spacing: .28em; color: #d7bd8a; font-size: 11px; }
-  h1 { margin: 16px 0 8px; font-family: Georgia, serif; font-size: clamp(34px, 8vw, 58px); font-weight: 500; }
-  header p { margin: 0; color: #c8c0b4; font-size: 14px; }
-  main { width: min(1100px, 100%); margin: auto; padding: 34px 18px 60px; }
-  .intro { text-align: center; color: #bcb4a8; font-size: 13px; line-height: 1.8; margin: 0 auto 28px; }
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 22px; align-items: start; }
-  .artwork { background: #1b1a18; border: 1px solid #40382e; padding: 12px; border-radius: 4px; }
-  .number { color: #cdb27c; font: 12px Georgia, serif; letter-spacing: .16em; margin: 2px 0 10px; }
-  .embed { min-height: 180px; display: grid; place-items: center; overflow: hidden; }
-  .embed blockquote { margin: 0 auto !important; }
-  .open { display: inline-block; color: #d9c49b; font-size: 12px; text-decoration: none; border-bottom: 1px solid #786447; padding: 8px 0 3px; margin-top: 8px; }
-  footer { text-align: center; color: #847b6e; font-size: 11px; padding: 24px; border-top: 1px solid #302a23; letter-spacing: .08em; }
+  .eyebrow { color: #d8bd8c; font-size: 11px; letter-spacing: .28em; }
+  h1 { margin: 17px 0 9px; font: 500 clamp(36px, 8vw, 60px)/1.15 Georgia, "Noto Serif KR", serif; }
+  header p { margin: 0; color: #d0c5b5; font-size: 14px; }
+  main { width: min(1120px, 100%); margin: auto; padding: 34px 16px 60px; }
+  .intro { margin: 0 auto 30px; text-align: center; color: #c4bbae; font-size: 13px; line-height: 1.9; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); gap: 22px; align-items: start; }
+  .artwork { min-width: 0; margin: 0; padding: 13px; background: #1c1a17; border: 1px solid #494033; border-radius: 5px; }
+  .number { margin: 1px 0 12px; color: #d4b77f; font: 12px Georgia, serif; letter-spacing: .16em; }
+  .image-frame { width: 100%; min-height: 180px; display: grid; place-items: center; background: #151310; overflow: hidden; }
+  .image-frame img { display: block; width: 100%; height: auto; max-height: 78vh; object-fit: contain; }
+  .image-error { padding: 22px 14px; color: #b8aa96; text-align: center; font-size: 12px; line-height: 1.7; }
+  footer { padding: 24px 12px; border-top: 1px solid #302a23; color: #8d8376; text-align: center; font-size: 11px; letter-spacing: .08em; }
+  @media (max-width: 480px) {
+    header { padding: 46px 16px 36px; }
+    main { padding: 26px 12px 46px; }
+    .gallery { grid-template-columns: 1fr; gap: 17px; }
+    .artwork { padding: 10px; }
+  }
 </style>
 </head>
 <body>
@@ -39,36 +44,107 @@
   <p>나만의 작은 갤러리 · My Personal Gallery</p>
 </header>
 <main>
-  <p class="intro">천천히 둘러보며 작품을 감상해 보세요.<br>작품을 누르면 원본 이미지 페이지가 열립니다.</p>
-  <section class="gallery" aria-label="이미지 갤러리">
-    <article class="artwork">
+  <p class="intro">내가 고른 다섯 작품을 한눈에 감상하는 공간입니다.</p>
+  <section class="gallery" aria-label="권미경 전시장 작품 목록">
+
+    <figure class="artwork">
       <div class="number">ARTWORK 01</div>
-      <div class="embed"><blockquote class="imgur-embed-pub" lang="en" data-id="TZHqUwX"><a href="https://imgur.com/TZHqUwX">View on Imgur</a></blockquote></div>
-      <a class="open" href="https://imgur.com/TZHqUwX" target="_blank" rel="noopener">원본 보기 ↗</a>
-    </article>
-    <article class="artwork">
+      <div class="image-frame">
+        <img
+          src="https://i.imgur.com/TZHqUwX.jpg"
+          data-id="TZHqUwX"
+          alt="권미경 전시장 작품 1"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="image-error" hidden>
+          이미지를 불러오지 못했어요. Imgur에서 원본 파일 접근을 허용하지 않거나 주소 형식이 다를 수 있어요.
+        </div>
+      </div>
+    </figure>
+
+    <figure class="artwork">
       <div class="number">ARTWORK 02</div>
-      <div class="embed"><blockquote class="imgur-embed-pub" lang="en" data-id="ytrLZq0"><a href="https://imgur.com/ytrLZq0">View on Imgur</a></blockquote></div>
-      <a class="open" href="https://imgur.com/ytrLZq0" target="_blank" rel="noopener">원본 보기 ↗</a>
-    </article>
-    <article class="artwork">
+      <div class="image-frame">
+        <img
+          src="https://i.imgur.com/ytrLZq0.jpg"
+          data-id="ytrLZq0"
+          alt="권미경 전시장 작품 2"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="image-error" hidden>
+          이미지를 불러오지 못했어요. Imgur에서 원본 파일 접근을 허용하지 않거나 주소 형식이 다를 수 있어요.
+        </div>
+      </div>
+    </figure>
+
+    <figure class="artwork">
       <div class="number">ARTWORK 03</div>
-      <div class="embed"><blockquote class="imgur-embed-pub" lang="en" data-id="AHaAFgg"><a href="https://imgur.com/AHaAFgg">View on Imgur</a></blockquote></div>
-      <a class="open" href="https://imgur.com/AHaAFgg" target="_blank" rel="noopener">원본 보기 ↗</a>
-    </article>
-    <article class="artwork">
+      <div class="image-frame">
+        <img
+          src="https://i.imgur.com/AHaAFgg.jpg"
+          data-id="AHaAFgg"
+          alt="권미경 전시장 작품 3"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="image-error" hidden>
+          이미지를 불러오지 못했어요. Imgur에서 원본 파일 접근을 허용하지 않거나 주소 형식이 다를 수 있어요.
+        </div>
+      </div>
+    </figure>
+
+    <figure class="artwork">
       <div class="number">ARTWORK 04</div>
-      <div class="embed"><blockquote class="imgur-embed-pub" lang="en" data-id="KHkehCj"><a href="https://imgur.com/KHkehCj">View on Imgur</a></blockquote></div>
-      <a class="open" href="https://imgur.com/KHkehCj" target="_blank" rel="noopener">원본 보기 ↗</a>
-    </article>
-    <article class="artwork">
+      <div class="image-frame">
+        <img
+          src="https://i.imgur.com/KHkehCj.jpg"
+          data-id="KHkehCj"
+          alt="권미경 전시장 작품 4"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="image-error" hidden>
+          이미지를 불러오지 못했어요. Imgur에서 원본 파일 접근을 허용하지 않거나 주소 형식이 다를 수 있어요.
+        </div>
+      </div>
+    </figure>
+
+    <figure class="artwork">
       <div class="number">ARTWORK 05</div>
-      <div class="embed"><blockquote class="imgur-embed-pub" lang="en" data-id="2PZnVdm"><a href="https://imgur.com/2PZnVdm">View on Imgur</a></blockquote></div>
-      <a class="open" href="https://imgur.com/2PZnVdm" target="_blank" rel="noopener">원본 보기 ↗</a>
-    </article>
+      <div class="image-frame">
+        <img
+          src="https://i.imgur.com/2PZnVdm.jpg"
+          data-id="2PZnVdm"
+          alt="권미경 전시장 작품 5"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="image-error" hidden>
+          이미지를 불러오지 못했어요. Imgur에서 원본 파일 접근을 허용하지 않거나 주소 형식이 다를 수 있어요.
+        </div>
+      </div>
+    </figure>
   </section>
 </main>
 <footer>권미경 전시장 · CURATED WITH CARE</footer>
-<script async src="https://s.imgur.com/min/embed.js" charset="utf-8"></script>
+<script>
+  // Imgur 이미지 확장자가 JPG가 아닐 경우 PNG, GIF, WEBP 순서로 직접 이미지 주소를 재시도합니다.
+  document.querySelectorAll(".image-frame img").forEach((img) => {
+    const id = img.dataset.id;
+    const extensions = ["jpg", "png", "gif", "webp", "jpeg"];
+    let attempt = 0;
+    img.addEventListener("error", () => {
+      attempt += 1;
+      if (attempt < extensions.length) {
+        img.src = `https://i.imgur.com/${id}.${extensions[attempt]}`;
+      } else {
+        img.hidden = true;
+        img.nextElementSibling.hidden = false;
+      }
+    });
+  });
+</script>
 </body>
 </html>
